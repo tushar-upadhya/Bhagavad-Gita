@@ -17,7 +17,7 @@ const MobileNavbar = () => {
             <Logo />
             <Navbar
               containerStyles="flex flx-col items-center gap-y-6"
-              linkStyle={"text-2xl"}
+              linkStyle={"text-l"}
             />
           </div>
           <Socials containerStyles={"flex gap-x-4"} iconsStyles={"text-2xl"} />

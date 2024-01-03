@@ -13,7 +13,7 @@ const Navbar = ({ containerStyles, linkStyle, underLineStyles }) => {
           <Link
             href={link.path}
             key={index}
-            className={`capitalize ${linkStyle}`}
+            className={`capitalize font-semibold text-slate-600 ${linkStyle}`}
           >
             {navLinks.path === path && (
               <motion.span

@@ -9,7 +9,9 @@ const Socials = ({ containerStyles, iconsStyles }) => {
       {socialsIcons.map((icon, index) => {
         return (
           <Link href={icon.path} key={index}>
-            <div className={`${iconsStyles}`}>{icon.name}</div>
+            <div className={`${iconsStyles} hover:text-sky-800`}>
+              {icon.name}
+            </div>
           </Link>
         );
       })}
