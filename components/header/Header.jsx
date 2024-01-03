@@ -2,7 +2,7 @@
 
 import Logo from "./Logo";
 import Navbar from "./Navbar";
-import ThemeToggle from "../ThemeToggle";
+// import ThemeToggle from "../ThemeToggle";
 import MobileNavbar from "./MobileNavbar";
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
@@ -40,7 +40,7 @@ const Header = () => {
               }
             />
 
-            <ThemeToggle />
+            {/* <ThemeToggle /> */}
 
             <div className="xl:hidden">
               <MobileNavbar />

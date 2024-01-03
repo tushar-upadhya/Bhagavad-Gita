@@ -7,7 +7,7 @@ const Navbar = ({ containerStyles, linkStyle, underLineStyles }) => {
   const path = usePathname();
 
   return (
-    <nav className={`${containerStyles} text-x font-semibold text-slate-600`}>
+    <nav className={`${containerStyles}`}>
       {navLinks.map((link, index) => {
         return (
           <Link
