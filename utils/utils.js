@@ -11,7 +11,7 @@ export const navLinks = [
   },
   {
     path: "/about",
-    name: "aboutgita",
+    name: "about Gita",
   },
 ];
 
