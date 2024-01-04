@@ -2,8 +2,8 @@ import { RiLinkedinFill, RiGithubFill } from "react-icons/ri";
 
 export const navLinks = [
   {
-    path: "/chapters",
-    name: "Chapters",
+    path: "/adhyay",
+    name: "Adhyay",
   },
   {
     path: "/quotes",
@@ -12,6 +12,10 @@ export const navLinks = [
   {
     path: "/aboutgita",
     name: "About Gita",
+  },
+  {
+    path: "/bhajan",
+    name: "Bhajan",
   },
 ];
 
