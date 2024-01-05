@@ -1,6 +1,6 @@
 "use client";
 
-import UseScroll from "@/hooks/UseScroll";
+import useScroll from "@/hooks/useScroll";
 import { motion } from "framer-motion";
 
 const variants = {
@@ -9,7 +9,7 @@ const variants = {
 };
 
 const Template = ({ children }) => {
-  const completion = UseScroll();
+  const completion = useScroll();
   return (
     <>
       <motion.main
