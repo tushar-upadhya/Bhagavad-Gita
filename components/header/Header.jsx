@@ -6,6 +6,7 @@ import Navbar from "./Navbar";
 import MobileNavbar from "./MobileNavbar";
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
+import SearchBar from "../SearchBar";
 
 const Header = () => {
   const [header, setHeader] = useState(false);
@@ -40,7 +41,7 @@ const Header = () => {
               }
             />
 
-            {/* <ThemeToggle /> */}
+            {/* <SearchBar /> */}
 
             <div className="xl:hidden">
               <MobileNavbar />
