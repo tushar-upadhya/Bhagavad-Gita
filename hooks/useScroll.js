@@ -5,7 +5,7 @@ const useScroll = () => {
 
   useEffect(() => {
     const updateScrollCompletion = () => {
-      const currentProgress = window.screenY;
+      const currentProgress = window.scrollY;
       const scrollHeight = document.body.scrollHeight - window.innerHeight;
 
       if (scrollHeight) {
@@ -14,10 +14,8 @@ const useScroll = () => {
     };
 
     window.addEventListener("scroll", updateScrollCompletion);
-
     return () => window.removeEventListener("scroll", updateScrollCompletion);
   }, []);
-
   return completion;
 };
 

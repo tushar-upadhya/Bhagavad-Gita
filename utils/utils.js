@@ -1,31 +1,32 @@
-import { RiLinkedinFill, RiGithubFill } from "react-icons/ri";
+import { Github, Linkedin } from "lucide-react";
 
-export const navLinks = [
+export const UtilsVariants = {
+  hidden: { opacity: 0 },
+  enter: { opacity: 1 },
+};
+
+export const utilsNavLink = [
   {
-    path: "/chapter",
-    name: "Chapter",
+    path: "/",
+    name: "home",
   },
   {
-    path: "/quotes",
-    name: "Quotes",
+    path: "/projects",
+    name: "Projects",
   },
   {
-    path: "/aboutgita",
-    name: "About Gita",
+    path: "/contact",
+    name: "Contact",
   },
-  // {
-  //   path: "/bhajan",
-  //   name: "Bhajan",
-  // },
 ];
 
-export const socialsIcons = [
+export const icons = [
   {
     path: "/",
-    name: <RiGithubFill />,
+    name: <Linkedin />,
   },
   {
     path: "/",
-    name: <RiLinkedinFill />,
+    name: <Github />,
   },
 ];
