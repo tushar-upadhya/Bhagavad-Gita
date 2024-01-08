@@ -1,4 +1,5 @@
 import { Github, Linkedin } from "lucide-react";
+import { projectData } from "./utilsProject";
 
 export const UtilsVariants = {
   hidden: { opacity: 0 },
@@ -29,4 +30,9 @@ export const icons = [
     path: "/",
     name: <Github />,
   },
+];
+
+export const uniqueCategory = [
+  "all projects",
+  ...new Set(projectData.map((item) => item.category)),
 ];

@@ -3,7 +3,7 @@
 import { icons } from "@/utils/utils";
 import Link from "next/link";
 
-const Socails = ({ containerStyles, iconsStyle }) => {
+const Socials = ({ containerStyles, iconsStyle }) => {
   return (
     <div className={`${containerStyles}`}>
       {icons.map((icon, index) => {
@@ -17,4 +17,4 @@ const Socails = ({ containerStyles, iconsStyle }) => {
   );
 };
 
-export default Socails;
+export default Socials;

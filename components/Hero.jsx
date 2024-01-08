@@ -9,7 +9,7 @@ import {
 } from "react-icons/ri";
 import DevImg from "./DevImg";
 import Badge from "./Badge";
-import Socails from "./Socails";
+import Socails from "./Socials";
 import Link from "next/link";
 
 const Hero = () => {
