@@ -1,18 +1,19 @@
-import Socials from "./Socials";
+import Socials from './Socials';
 
 const Footer = () => {
   return (
-    <footer className="py-12 bg-secondary">
-      <div className="container mx-auto">
-        <div className="flex flex-col items-center justify-between">
-          {/* socails */}
+    <footer className='bg-secondary py-12'>
+      <div className='container mx-auto'>
+        <div className='flex flex-col items-center justify-between'>
+          {/* socials */}
           <Socials
-            containerStyles={"flex gap-x-6 mx-auto xl:mx-0 mb-4"}
-            iconsStyle={
-              "text-primary dark:text-white/70 text-[20px] hover:text-white dark:hover:text-primary transition-all duration:300"
-            }
+            containerStyles='flex gap-x-6 mx-auto xl:mx-0 mb-4'
+            iconsStyles='text-primary dark:text-white/70 text-[20px] hover:text-white dark:hover:text-primary transition-all'
           />
-          <div className="text-muted-foreground">no copyright &copy;</div>
+          {/* copyright */}
+          <div className='text-muted-foreground'>
+            Copyright &copy; Ryan Davis. All rights reserved.
+          </div>
         </div>
       </div>
     </footer>

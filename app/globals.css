@@ -15,7 +15,7 @@
       --primary-foreground: 300 0% 100%;
       --secondary: 240 19% 16%;
       --secondary-foreground: 300 0% 100%;
-      --tertiary:27 82% 98%
+      --tertiary: 27 82% 98%;
       --muted: 60 4.8% 95.9%;
       --muted-foreground: 237 13% 40%;
       --accent: 237 9% 96%;
@@ -39,7 +39,7 @@
       --primary-foreground: 300 0% 100%;
       --secondary: 240 19% 16%;
       --secondary-foreground: 300 0% 100%;
-      --tertiary:237 22% 20%;
+      --tertiary: 237 22% 20%;
       --muted: 12 6.5% 15.1%;
       --muted-foreground: 237 13% 63%;
       --accent: 240 19% 16%;
@@ -66,31 +66,33 @@
   @apply text-6xl xl:text-[72px] xl:leading-[80px] tracking-[-2px] font-bold;
 }
 
+.h2 {
+  @apply text-4xl font-bold;
+}
+
+.h3 {
+  @apply text-3xl font-bold;
+}
+
+.h4 {
+  @apply text-[22px] font-semibold;
+}
+
 .subtitle {
-  @apply mb-8 text-lg font-light text-muted-foreground;
+  @apply text-muted-foreground text-lg mb-8 font-light;
 }
 
-.badge{
-  @apply z-10 w-[20px] bg-white dark:backdrop-blur-[44px] shadow-2xl h-[68px] p-4 rounded-[10px] flex items-center gap-x-4
-}
-.section-title{
-  @apply text-4xl font-bold relative w-max flex items-center justify-between
-   gap-x-3 before:bg-dots_light before:dark:bg-dots_dark before:bg-no-repeat before:bg-center before:w-[24px] before:h-[24px]
+.section-title {
+  @apply text-4xl font-bold relative w-max flex items-center justify-between gap-x-3 before:bg-dots_light before:dark:bg-dots_dark before:bg-no-repeat before:bg-center before:w-[24px] before:h-[24px];
 }
 
-.h2{
-  @apply text-3xl font-bold
+.badge {
+  @apply z-10 w-[200px] h-[68px] bg-white dark:backdrop-blur-[44px] shadow-2xl p-4 rounded-[10px] flex items-center gap-x-4;
 }
 
-.h3{
-  @apply text-3xl font-bold
-}
-
-.h4{
-@apply text-[22px] font-semibold
-}
-
-
-.swiper-horizontal > .section-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal .swiper-pagination-bullets{
-  @apply bg-primary
+/* swiper bullets styles */
+.swiper-horizontal > .section-pagination-bullets .swiper-pagination-bullet,
+.swiper-pagination-horizontal.swiper-pagination-bullets
+  .swiper-pagination-bullet {
+  @apply bg-primary;
 }

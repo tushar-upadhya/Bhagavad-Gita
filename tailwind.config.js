@@ -7,14 +7,16 @@ module.exports = {
     "./app/**/*.{js,jsx}",
     "./src/**/*.{js,jsx}",
   ],
-  prefix: "",
   theme: {
     container: {
       center: true,
       padding: "2rem",
-      screens: {
-        "2xl": "1400px",
-      },
+    },
+    screens: {
+      sm: "320px",
+      md: "375px",
+      lg: "768px",
+      xl: "1080px",
     },
     extend: {
       colors: {
@@ -62,12 +64,12 @@ module.exports = {
       },
       keyframes: {
         "accordion-down": {
-          from: { height: "0" },
+          from: { height: 0 },
           to: { height: "var(--radix-accordion-content-height)" },
         },
         "accordion-up": {
           from: { height: "var(--radix-accordion-content-height)" },
-          to: { height: "0" },
+          to: { height: 0 },
         },
       },
       animation: {
@@ -75,19 +77,18 @@ module.exports = {
         "accordion-up": "accordion-up 0.2s ease-out",
       },
       backgroundImage: {
-        hero: "url(/assets/hero/hero-bg-png)",
-        hero_shape: "url(/assets/hero/shape-1.svg)",
-        hero_shape2_light: "url(/assets/hero/shape-2-light.svg)",
-        hero_shape2_dark: "url(/assets/hero/shape-2-dark.svg)",
-        dots_light: "url(/assets/dots-light.svg)",
-        dots_dark: "url(/assets/dots-dark.svg)",
-        about_shape_light: "url(/assets/about/shape-light.svg)",
-        about_shape_dark: "url(/assets/about/shape-dark.svg)",
-        work_project_bg_light: "url(/assets/work/project-bg-light.png)",
-        work_project_bg_dark: "url(/assets/work/project-bg-dark.png)",
-        contact_illustration_light:
-          "url(/assets/contact/illustration-light.svg)",
-        contact_illustration_dark: "url(/assets/contact/illustration-dark.svg)",
+        hero: "url(/hero/hero-bg.png)",
+        hero_shape: "url(/hero/shape-1.svg)",
+        hero_shape2_light: "url(/hero/shape-2-light.svg)",
+        hero_shape2_dark: "url(/hero/shape-2-dark.svg)",
+        about_shape_light: "url(/about/shape-light.svg)",
+        about_shape_dark: "url(/about/shape-dark.svg)",
+        dots_light: "url(/dots-light.svg)",
+        dots_dark: "url(/dots-dark.svg)",
+        work_project_bg_light: "url(/work/project-bg-light.png)",
+        work_project_bg_dark: "url(/work/project-bg-dark.png)",
+        contact_illustration_light: "url(/contact/illustration-light.svg)",
+        contact_illustration_dark: "url(/contact/illustration-dark.svg)",
       },
     },
   },

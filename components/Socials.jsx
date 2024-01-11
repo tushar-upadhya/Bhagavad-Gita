@@ -1,15 +1,15 @@
 "use client";
 
-import { icons } from "@/utils/utils";
+import { icons } from "@/utils/utilsSocials";
 import Link from "next/link";
 
-const Socials = ({ containerStyles, iconsStyle }) => {
+const Socials = ({ containerStyles, iconsStyles }) => {
   return (
     <div className={`${containerStyles}`}>
       {icons.map((icon, index) => {
         return (
-          <Link href={"icon.path"}>
-            <div className={`${iconsStyle}`}>{icon.name}</div>
+          <Link href={icon.path} key={index}>
+            <div className={`${iconsStyles}`}>{icon.name}</div>
           </Link>
         );
       })}

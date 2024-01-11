@@ -5,33 +5,32 @@ import {
   PhoneCall,
   GraduationCap,
   Calendar,
-  Briefcase,
 } from "lucide-react";
 
-export const aboutData = [
+export const infoData = [
   {
     icon: <User2 size={20} />,
-    text: "Tushar Upadhyay",
+    text: "Ryan Davis",
   },
   {
     icon: <PhoneCall size={20} />,
-    text: "8965238566",
+    text: "+012 345 6789",
   },
   {
     icon: <MailIcon size={20} />,
-    text: "tusharupadhyay690@gmail.com",
+    text: "youremail@email.com",
   },
   {
     icon: <Calendar size={20} />,
-    text: "Born on 05 Apr 1998",
+    text: "Born on 10 Mar, 1998",
   },
   {
     icon: <GraduationCap size={20} />,
-    text: "Dau Dayal Institute of Vocational Education",
+    text: "Master on Computer Science",
   },
   {
     icon: <HomeIcon size={20} />,
-    text: "Hathras,UP, India",
+    text: "321 Blue Avenue, NY, USA",
   },
 ];
 
@@ -40,14 +39,19 @@ export const qualificationData = [
     title: "education",
     data: [
       {
-        university: "Dau Dayal Institute of Vocational Education",
-        qualification: "Master of Science",
-        years: "2018 - 2020",
+        university: "Example University",
+        qualification: "Bachelor of Science",
+        years: "2015 - 2018",
       },
       {
-        university: "Dau Dayal Institute of Vocational Education",
-        qualification: "Bachelor of Science",
-        years: "2013 - 2017",
+        university: "Another University",
+        qualification: "Master of Arts",
+        years: "2019 - 2021",
+      },
+      {
+        university: "Yet Another University",
+        qualification: "Ph.D in Computer Science",
+        years: "2021 - 2025",
       },
     ],
   },
@@ -55,9 +59,19 @@ export const qualificationData = [
     title: "experience",
     data: [
       {
-        company: "MentorAide",
-        role: "Frontend Developer",
-        years: "2023 August - 2024 January",
+        company: "ABC Inc.",
+        role: "Software Engineer",
+        years: "2018 - 2020",
+      },
+      {
+        company: "XYZ Corporation",
+        role: "Senior Developer",
+        years: "2020 - 2022",
+      },
+      {
+        company: "Tech Innovators",
+        role: "Lead Developer",
+        years: "2022 - Present",
       },
     ],
   },
@@ -74,7 +88,10 @@ export const skillData = [
         name: "Front-end Development",
       },
       {
-        name: "JavaScript, CSS,",
+        name: "Javascript, PHP",
+      },
+      {
+        name: "Back-end Development",
       },
     ],
   },
@@ -82,13 +99,16 @@ export const skillData = [
     title: "tools",
     data: [
       {
-        imgPath: "/assets/about/vscode.svg",
+        imgPath: "/about/vscode.svg",
       },
       {
-        imgPath: "/assets/about/figma.svg",
+        imgPath: "/about/figma.svg",
       },
       {
-        imgPath: "/assets/about/.svg",
+        imgPath: "/about/notion.svg",
+      },
+      {
+        imgPath: "/about/wordpress.svg",
       },
     ],
   },
