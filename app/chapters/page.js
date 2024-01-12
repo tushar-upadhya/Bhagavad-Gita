@@ -21,7 +21,7 @@ const Chapters = () => {
     <section className="min-h-screen pt-12">
       <div className="container mx-auto">
         <h2 className="mx-auto mb-8 text-center section-title xl:mb-16">
-          My Projects
+          Chapters
         </h2>
         {/* tabs */}
         <Tabs defaultValue={category} className="mb-24 xl:mb-48">
