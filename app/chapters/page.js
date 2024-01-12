@@ -6,7 +6,7 @@ import ProjectCard from "@/components/ProjectCard";
 import { projectData } from "@/utils/utilsData";
 import { uniqueCategories } from "@/utils/utils";
 
-const Projects = () => {
+const Chapters = () => {
   const [categories, setCategories] = useState(uniqueCategories);
   const [category, setCategory] = useState("all projects");
 
@@ -55,4 +55,4 @@ const Projects = () => {
   );
 };
 
-export default Projects;
+export default Chapters;
