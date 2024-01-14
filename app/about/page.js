@@ -6,12 +6,15 @@ const About = () => {
       <div className="w-full px-4 mt-4 text-center md:px-0">
         <p className="mb-2 text-lg leading-relaxed">
           <span className="text-primary">Bhagavad Gita</span> , also known as
-          the Gita - "The Song of The Lord" is a practical guide to one's life
-          that guides one to re-organise their life, achieve inner peace and
-          approach the Supreme Lord
-          <span className="text-primary">(the Ultimate Reality).</span>
-          It is a 700-verse text in Sanskrit which comprises chapters 23 through
-          40 in the Bhishma-Parva section of the Mahabharata.
+          the <span className="text-primary">Gita</span>- "The Song of The Lord"
+          is a practical guide to one's life that guides one to re-organise
+          their life, achieve inner peace and approach the Supreme Lord
+          <span className="text-primary">(the Ultimate Reality)</span> . It is a
+          <span className="text-primary">
+            {" "}
+            700-verse text in Sanskrit which comprises chapters 23 through 40{" "}
+          </span>
+          in the Bhishma-Parva section of the Mahabharata.
         </p>
         <p className="text-lg leading-relaxed">
           The {"  "}
@@ -24,16 +27,22 @@ const About = () => {
           losing his relatives and friends and the consequent sins attributed to
           killing his own relatives. So, he surrenders to{" "}
           <span className="text-primary">Lord Krishna</span>, seeking a
-          solution. Thus, follows the wisdom of the Bhagavad Gita. Over 18
-          chapters, Gita packs an intense analysis of life, emotions and
-          ambitions, discussion of various types of yoga, including Jnana,
-          Bhakti, Karma and Raja, the difference between Self and the material
-          body as well as the revelation of the Ultimate Purpose of Life.
+          solution. Thus, follows the wisdom of the Bhagavad Gita. Over
+          <span className="text-primary"> 18 chapters</span>, Gita packs an
+          intense analysis of life, emotions and ambitions, discussion of
+          various types of yoga, including Jnana, Bhakti, Karma and Raja, the
+          difference between Self and the material body as well as the
+          revelation of the Ultimate Purpose of Life.
         </p>
       </div>
-      <div className="w-full h-4">
-        {/* <Image src="/about/gita.png" layout="fill" alt="gita" /> */}
-      </div>
+      {/* <div className="w-full h-4">
+        <Image
+          src="/about/gita.png"
+          // layout="fill"
+          fill={true}
+          alt="gita"
+        />
+      </div> */}
     </div>
   );
 };

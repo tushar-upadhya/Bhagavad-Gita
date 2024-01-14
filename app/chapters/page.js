@@ -1,21 +1,48 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 import { Tabs, TabsList, TabsContent, TabsTrigger } from "@/components/ui/tabs";
-import ProjectCard from "@/components/ProjectCard";
-import { projectData } from "@/utils/utilsData";
-import { uniqueCategories } from "@/utils/utils";
+import Chapter from "@/components/Chapter";
 
 const Chapters = () => {
-  const [categories, setCategories] = useState(uniqueCategories);
-  const [category, setCategory] = useState("all projects");
+  const [category, setCategory] = useState("Chapters");
+  const [apiData, setApiData] = useState([]);
+  const categories = ["Chapters", "Verses"];
 
-  const filteredProjects = projectData.filter((project) => {
-    // if category is 'all projects' return all projects, else filter by category
-    return category === "all projects"
-      ? project
-      : project.category === category;
-  });
+  useEffect(() => {
+    const fetchData = async () => {
+      const url =
+        category === "Chapters"
+          ? "https://bhagavad-gita3.p.rapidapi.com/v2/chapters/"
+          : "https://bhagavad-gita3.p.rapidapi.com/v2/chapters/1/verses/";
+
+      const options = {
+        method: "GET",
+        url: url,
+        headers: {
+          "X-RapidAPI-Key":
+            "947162b802mshb99e34a9e50bacbp1e8c83jsn35dc3a87ef76",
+          "X-RapidAPI-Host": "bhagavad-gita3.p.rapidapi.com",
+        },
+      };
+
+      try {
+        const response = await axios.request(options);
+        console.log("API data:", response.data); // Log the API data
+        setApiData(response.data);
+      } catch (error) {
+        console.error(error);
+      }
+    };
+    fetchData();
+  }, [category]);
+
+  const filtered = Array.isArray(apiData)
+    ? apiData.filter((filtered) => {
+        return category === "all" ? filtered : filtered.category === category;
+      })
+    : [];
 
   return (
     <section className="min-h-screen pt-12">
@@ -41,10 +68,10 @@ const Chapters = () => {
           </TabsList>
           {/* tabs content */}
           <div className="grid grid-cols-1 gap-4 text-lg xl:mt-8 lg:grid-cols-3">
-            {filteredProjects.map((project, index) => {
+            {filtered.map((lesson, index) => {
               return (
                 <TabsContent value={category} key={index}>
-                  <ProjectCard project={project} />
+                  <Chapter lesson={lesson} />
                 </TabsContent>
               );
             })}

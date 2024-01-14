@@ -1,17 +1,10 @@
-import Link from "next/link";
-import { Button } from "./ui/button";
-import { Download, Send } from "lucide-react";
+// import Link from "next/link";
+// import { Button } from "./ui/button";
+// import { Download, Send } from "lucide-react";
 
-import {
-  RiBriefcase4Fill,
-  RiTeamFill,
-  RiTodoFill,
-  RiArrowDownSLine,
-} from "react-icons/ri";
+import { RiArrowDownSLine } from "react-icons/ri";
 
-// components
 import DevImg from "./DevImg";
-import Badge from "./Badge";
 import Socials from "./Socials";
 
 const Hero = () => {

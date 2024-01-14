@@ -1,30 +1,12 @@
-import {
-  RiYoutubeFill,
-  RiLinkedinFill,
-  RiGithubFill,
-  RiFacebookFill,
-  RiInstagramFill,
-} from "react-icons/ri";
+import { RiLinkedinFill, RiGithubFill } from "react-icons/ri";
 
 export const icons = [
   {
-    path: "/",
-    name: <RiYoutubeFill />,
-  },
-  {
-    path: "/",
+    path: "https://www.linkedin.com/in/tusharupadhya/",
     name: <RiLinkedinFill />,
   },
   {
-    path: "/",
+    path: "https://github.com/tushar-upadhya/Bhagavad-Gita",
     name: <RiGithubFill />,
-  },
-  {
-    path: "/",
-    name: <RiFacebookFill />,
-  },
-  {
-    path: "/",
-    name: <RiInstagramFill />,
   },
 ];
