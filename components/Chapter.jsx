@@ -5,11 +5,10 @@ import { Github, Link2Icon } from "lucide-react";
 import { Badge } from "./ui/badge";
 
 const Chapter = ({ lesson }) => {
-  console.log("lesson:", lesson);
+  // console.log("lesson:", lesson);
   return (
     <Card className="relative overflow-hidden group">
       <CardHeader className="p-0">
-        {/* image */}
         <div className="relative w-full h-[300px] flex items-center justify-center bg-tertiary dark:bg-secondary/40 xl:bg-work_project_bg_light xl:dark:bg-work_project_bg_dark xl:bg-[110%] xl:bg-no-repeat overflow-hidden">
           {/* btn links */}
         </div>

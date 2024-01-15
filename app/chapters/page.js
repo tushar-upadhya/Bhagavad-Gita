@@ -7,19 +7,14 @@ import Chapter from "@/components/Chapter";
 
 const Chapters = () => {
   const [category, setCategory] = useState("Chapters");
-  const [apiData, setApiData] = useState([]);
+  const [apiData, setApiData] = useState();
   const categories = ["Chapters", "Verses"];
 
   useEffect(() => {
     const fetchData = async () => {
-      const url =
-        category === "Chapters"
-          ? "https://bhagavad-gita3.p.rapidapi.com/v2/chapters/"
-          : "https://bhagavad-gita3.p.rapidapi.com/v2/chapters/1/verses/";
-
       const options = {
         method: "GET",
-        url: url,
+        url: "https://bhagavad-gita3.p.rapidapi.com/v2/chapters/1/verses/1/",
         headers: {
           "X-RapidAPI-Key":
             "947162b802mshb99e34a9e50bacbp1e8c83jsn35dc3a87ef76",
@@ -43,6 +38,8 @@ const Chapters = () => {
         return category === "all" ? filtered : filtered.category === category;
       })
     : [];
+
+  // ... Rest of your code ...
 
   return (
     <section className="min-h-screen pt-12">
@@ -68,13 +65,14 @@ const Chapters = () => {
           </TabsList>
           {/* tabs content */}
           <div className="grid grid-cols-1 gap-4 text-lg xl:mt-8 lg:grid-cols-3">
-            {filtered.map((lesson, index) => {
-              return (
-                <TabsContent value={category} key={index}>
-                  <Chapter lesson={lesson} />
-                </TabsContent>
-              );
-            })}
+            {apiData &&
+              apiData.map((lesson, index) => {
+                return (
+                  <TabsContent value={category} key={index}>
+                    <Chapter lesson={lesson} />
+                  </TabsContent>
+                );
+              })}
           </div>
         </Tabs>
       </div>
