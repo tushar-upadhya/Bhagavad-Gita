@@ -3,11 +3,9 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import Chapter from "@/components/Chapter";
-import Verse from "@/components/Verse";
 
 const Chapters = () => {
-  const [verse, setVerse] = useState();
-  const [apiData, setApiData] = useState();
+  const [apiData, setApiData] = useState([]);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -24,7 +22,6 @@ const Chapters = () => {
 
       try {
         const response = await axios.request(options);
-        // console.log("response:", response.data);
         setApiData(response.data);
       } catch (error) {
         console.error(error);
@@ -37,7 +34,7 @@ const Chapters = () => {
   //   const fetchData = async () => {
   //     const options = {
   //       method: "GET",
-  //       url: "'https://bhagavad-gita3.p.rapidapi.com/v2/chapters/1/verses/'",
+  //       url: "https://bhagavad-gita3.p.rapidapi.com/v2/chapters/1/verses/",
   //       headers: {
   //         "X-RapidAPI-Key":
   //           "947162b802mshb99e34a9e50bacbp1e8c83jsn35dc3a87ef76",
@@ -47,10 +44,9 @@ const Chapters = () => {
 
   //     try {
   //       const response = await axios.request(options);
-  //       console.log("API response:", response.data);
-  //       setVerse(response.data);
+  //       setApiData(response.data);
   //     } catch (error) {
-  //       console.error("API error:", error);
+  //       console.error(error);
   //     }
   //   };
   //   fetchData();
@@ -64,23 +60,11 @@ const Chapters = () => {
         </h2>
         <div className="mb-24 xl:mb-48">
           <div className="gap-4 text-lg xl:mt-8 lg:grid-cols-3">
-            {Array.isArray(apiData) &&
-              apiData.map((lesson, index) => {
-                return (
-                  <div key={index} className="mt-4">
-                    <Chapter lesson={lesson} />
-                  </div>
-                );
-              })}
-
-            {/* {Array.isArray(verse) &&
-              verse.map((vers, index) => {
-                return (
-                  <div key={index} className="mt-4">
-                    <Verse vers={vers} />
-                  </div>
-                );
-              })} */}
+            {apiData.map((lesson, index) => (
+              <div key={index} className="mt-4">
+                <Chapter lesson={lesson} />
+              </div>
+            ))}
           </div>
         </div>
       </div>
