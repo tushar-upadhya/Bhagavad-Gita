@@ -16,8 +16,7 @@ const Contact = () => {
             </div>
             <h1 className="max-w-md mb-8 h1">Let's Work Together.</h1>
             <p className="subtitle max-w-[400px]">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat,
-              nostrum.
+              developing Creative & Interactive web apps
             </p>
           </div>
           {/* illustration */}
@@ -30,18 +29,18 @@ const Contact = () => {
             {/* mail */}
             <div className="flex items-center gap-x-8">
               <MailIcon size={18} className="text-primary" />
-              <div>youremail@gmail.com</div>
+              <div>tusharupadhyay690@gmail.com</div>
             </div>
             {/* address */}
             <div className="flex items-center gap-x-8">
               <HomeIcon size={18} className="text-primary" />
-              <div>8420 Pine Avenue, Meadowville MC 842</div>
+              <div>Hathras, India</div>
             </div>
             {/* phone */}
-            <div className="flex items-center gap-x-8">
+            {/* <div className="flex items-center gap-x-8">
               <PhoneCall size={18} className="text-primary" />
-              <div>+44 123 546 7890</div>
-            </div>
+              <div>+91 8979033432</div>
+            </div> */}
           </div>
           <Form />
         </div>

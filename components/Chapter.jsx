@@ -1,31 +1,27 @@
-import Link from "next/link";
-import Image from "next/image";
-import { Card, CardHeader } from "./ui/card";
-import { Github, Link2Icon } from "lucide-react";
 import { Badge } from "./ui/badge";
+import Verse from "./Verse";
 
 const Chapter = ({ lesson }) => {
   // console.log("lesson:", lesson);
   return (
-    <Card className="relative overflow-hidden group">
-      <CardHeader className="p-0">
-        <div className="relative w-full h-[300px] flex items-center justify-center bg-tertiary dark:bg-secondary/40 xl:bg-work_project_bg_light xl:dark:bg-work_project_bg_dark xl:bg-[110%] xl:bg-no-repeat overflow-hidden">
-          {/* btn links */}
-        </div>
-      </CardHeader>
-      <div className="h-full px-8 py-6">
-        <Badge className="absolute mb-2 text-sm font-medium uppercase top-4 left-5">
-          {lesson.chapter_number}
+    <div className="relative overflow-hidden group">
+      <div className="h-full px-8 py-6 ">
+        <Badge className="absolute mb-8 text-sm font-medium uppercase top-2 right-5 ">
+          {lesson.slug}
         </Badge>
-        <h4 className="mb-1 h4">{lesson.name}</h4>
-        <p className="text-lg text-muted-foreground">
-          {lesson.chapter_summary}
-        </p>
-        <p className="text-lg text-muted-foreground">
-          {lesson.chapter_summary_hindi}
-        </p>
+        <h4 className="mt-4 mb-1 border-b h4">{lesson.name}</h4>
+        <div className="mt-4 leading-6">
+          <p className="text-lg text-muted-foreground">
+            {lesson.chapter_summary_hindi}
+          </p>
+          <p className="mt-3 text-lg text-muted-foreground">
+            {lesson.chapter_summary}
+          </p>
+        </div>
+
+        <Verse />
       </div>
-    </Card>
+    </div>
   );
 };
 
