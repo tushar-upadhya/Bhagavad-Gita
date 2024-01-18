@@ -1,11 +1,6 @@
+"use clients";
+import Verse from "./Verse";
 import { Badge } from "./ui/badge";
-
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "./ui/accordion";
 
 const Chapter = ({ lesson, onClick }) => {
   return (
@@ -24,13 +19,7 @@ const Chapter = ({ lesson, onClick }) => {
           <p className="mt-3 text-lg text-muted-foreground">
             {lesson.chapter_summary}
           </p>
-          <Accordion type="single" collapsible className="w-full">
-            <AccordionItem value="item-1">
-              <AccordionTrigger>Verse</AccordionTrigger>
-              <AccordionContent>{lesson.verses_count}</AccordionContent>
-              {/* <AccordionContent>{lesson.chapter_summary}</AccordionContent> */}
-            </AccordionItem>
-          </Accordion>
+          <Verse chapterNumber={lesson.chapter_number} />
         </div>
       </div>
     </div>
