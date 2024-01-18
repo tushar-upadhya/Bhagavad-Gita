@@ -4,7 +4,10 @@ import { Badge } from "./ui/badge";
 
 const Chapter = ({ lesson, onClick }) => {
   return (
-    <div className="relative overflow-hidden group" onClick={onClick}>
+    <div
+      className="relative flex flex-col items-center justify-center w-full h-full p-4 overflow-hidden group"
+      onClick={onClick}
+    >
       <div className="h-full px-8 py-6 ">
         <Badge className="absolute mb-8 text-sm font-medium capitalize top-2 right-12 ">
           {lesson.slug}
