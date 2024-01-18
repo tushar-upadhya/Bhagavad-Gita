@@ -15,8 +15,8 @@ const Contact = () => {
               Say Hello 👋
             </div>
             <h1 className="max-w-md mb-8 h1">Let's Work Together.</h1>
-            <p className="subtitle max-w-[400px]">
-              developing Creative & Interactive web apps
+            <p className="subtitle max-w-[400px] capitalize">
+              I'm developing Creative & Interactive web apps
             </p>
           </div>
           {/* illustration */}
@@ -36,13 +36,7 @@ const Contact = () => {
               <HomeIcon size={18} className="text-primary" />
               <div>Hathras, India</div>
             </div>
-            {/* phone */}
-            {/* <div className="flex items-center gap-x-8">
-              <PhoneCall size={18} className="text-primary" />
-              <div>+91 8979033432</div>
-            </div> */}
           </div>
-          <Form />
         </div>
       </div>
     </section>

@@ -1,6 +1,10 @@
+import Link from "next/link";
 import Socials from "./Socials";
 
 const Footer = () => {
+  const currentYear = new Date().getFullYear();
+  const currentMonth = new Date().toLocaleString("default", { month: "long" });
+
   return (
     <footer className="py-12 bg-secondary">
       <div className="container mx-auto">
@@ -12,7 +16,14 @@ const Footer = () => {
           />
           {/* copyright */}
           <div className="text-muted-foreground">
-            nocopyright &copy; Tushar upadhyay.
+            {currentMonth} - {currentYear} | nocopyright &copy;{" "}
+            <Link
+              href="/absolute mb-8 text-sm font-medium capitalize top-2 right-12 "
+              target="_blank"
+              className="capitalize transition-all duration-200 underline-offset-8 hover:text-primary "
+            >
+              Tushar upadhyay.
+            </Link>{" "}
           </div>
         </div>
       </div>

@@ -39,13 +39,22 @@ const Verse = ({ chapterNumber }) => {
       {apiData &&
         apiData.map((verse, index) => (
           <AccordionItem key={index} value={`item-${index}`}>
-            <AccordionTrigger>Verse {verse.verse_number}</AccordionTrigger>
+            <AccordionTrigger className="m-1 ">
+              Verse {verse.verse_number}
+            </AccordionTrigger>
             <AccordionContent>
-              <p>{verse.text}</p>
-              <p>{verse.transliteration}</p>
-              <p>{verse.word_meanings}</p>
+              <p className="mt-2 text-xl font-semibold border-b text-primary">
+                {verse.text}
+              </p>
+              {/* <p>{verse.transliteration}</p> */}
+              {/* <p>{verse.word_meanings}</p> */}
               {verse.translations.map((translation, tIndex) => (
-                <p key={tIndex}>{translation.description}</p>
+                <p
+                  key={tIndex}
+                  className="mt-3 text-lg capitalize text-inherit "
+                >
+                  {translation.description}
+                </p>
               ))}
             </AccordionContent>
           </AccordionItem>
