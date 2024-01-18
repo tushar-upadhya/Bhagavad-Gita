@@ -12,10 +12,6 @@ export const infoData = [
     icon: <User2 size={20} />,
     text: "Krishna (Kanha)",
   },
-  // {
-  //   icon: <PhoneCall size={20} />,
-  //   text: "+012 345 6789",
-  // },
   {
     icon: <MailIcon size={20} />,
     text: "radheradheBolo@email.com",
