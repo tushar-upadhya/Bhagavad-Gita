@@ -25,18 +25,6 @@ const Hero = () => {
               700-verse text in Sanskrit which comprises chapters 23 through 40
               in the Bhishma-Parva section of the Mahabharata.
             </p>
-            {/* buttons */}
-            {/* <div className="flex flex-col mx-auto mb-12 gap-y-3 md:flex-row gap-x-3 xl:mx-0">
-              <Link href="/contact">
-                <Button className="gap-x-2">
-                  Contact me <Send size={18} />
-                </Button>
-              </Link>
-              <Button variant="secondary" className="gap-x-2">
-                Download CV
-                <Download size={18} />
-              </Button>
-            </div> */}
             {/* socials */}
             <Socials
               containerStyles="flex gap-x-6 mx-auto xl:mx-0"

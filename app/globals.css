@@ -79,7 +79,7 @@
 }
 
 .subtitle {
-  @apply text-muted-foreground text-lg mb-8 font-light;
+  @apply mb-8 text-lg font-light text-muted-foreground;
 }
 
 .section-title {

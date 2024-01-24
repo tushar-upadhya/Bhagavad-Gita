@@ -48,7 +48,7 @@ const Chapters = () => {
           <Carousel>
             <CarouselPrevious />
             <CarouselNext />
-            <CarouselContent>
+            <CarouselContent className="cursor-grab">
               {apiData.map((lesson, index) => (
                 <CarouselItem key={index}>
                   <Chapter lesson={lesson} />

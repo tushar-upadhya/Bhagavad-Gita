@@ -16,13 +16,13 @@ const Chapter = ({ lesson, onClick }) => {
           {lesson.name} | {lesson.name_translated}{" "}
         </h4>
         <div className="mt-4 leading-8 ">
-          <p className="text-lg text-muted-foreground">
+          <p className="text-lg font-semibold ">
             {lesson.chapter_summary_hindi}
           </p>
-          <p className="mt-3 text-lg text-muted-foreground">
+          <p className="mt-3 text-lg font-semibold text-muted-foreground">
             {lesson.chapter_summary}
           </p>
-          <p className="mt-3 text-lg font-bold text-slate-600">
+          <p className="mt-3 text-lg font-bold text-inherit">
             Verse {lesson.verses_count}
           </p>
           <Verse chapterNumber={lesson.chapter_number} />
