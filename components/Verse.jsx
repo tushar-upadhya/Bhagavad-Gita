@@ -43,24 +43,24 @@ const Verse = ({ chapterNumber }) => {
               Verse {verse.verse_number} | {verse.text}
             </AccordionTrigger>
             <AccordionContent>
-              {/* <p>{verse.transliteration}</p> */}
-              {/* <p>{verse.word_meanings}</p> */}
-              {/* {verse.translations.map((translation, tIndex) => (
+              <p>{verse.transliteration}</p>
+              <p>{verse.word_meanings}</p>
+              {verse.translations.map((translation, tIndex) => (
                 <p
                   key={tIndex}
                   className="m-6 mt-3 text-lg font-semibold capitalize transition-all duration-150 cursor-pointer text-inherit hover:border-b-2 "
                 >
                   {translation.description}
                 </p>
-              ))} */}
-              {verse.commentaries.map((commentarie, tIndex) => (
+              ))}
+              {/* {verse.commentaries.map((commentarie, tIndex) => (
                 <p
                   key={tIndex}
                   className="m-6 mt-3 text-lg font-semibold capitalize transition-all duration-150 cursor-pointer text-inherit hover:border-b-2 "
                 >
                   {commentarie.description}
                 </p>
-              ))}
+              ))} */}
             </AccordionContent>
           </AccordionItem>
         ))}
