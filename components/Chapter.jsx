@@ -1,4 +1,5 @@
-"use clients";
+// "use clients";
+
 import Verse from "./Verse";
 import { Badge } from "./ui/badge";
 
@@ -15,6 +16,7 @@ const Chapter = ({ lesson, onClick }) => {
         <h4 className="mt-4 mb-1 border-b h4">
           {lesson.name} | {lesson.name_translated}{" "}
         </h4>
+
         <div className="mt-4 leading-8 ">
           <p className="text-lg font-semibold ">
             {lesson.chapter_summary_hindi}

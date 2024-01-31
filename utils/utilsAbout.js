@@ -1,11 +1,4 @@
-import {
-  User2,
-  MailIcon,
-  HomeIcon,
-  PhoneCall,
-  GraduationCap,
-  Calendar,
-} from "lucide-react";
+import { User2, MailIcon, HomeIcon, GraduationCap } from "lucide-react";
 
 export const infoData = [
   {
@@ -16,10 +9,6 @@ export const infoData = [
     icon: <MailIcon size={20} />,
     text: "radheradheBolo@email.com",
   },
-  // {
-  //   icon: <Calendar size={20} />,
-  //   text: "Born on 10 Mar, 1998",
-  // },
   {
     icon: <GraduationCap size={20} />,
     text: "Wisdom, Devotion and Spiritual Knowledge",
@@ -68,5 +57,12 @@ export const skillData = [
         imgPath: "/about/wordpress.svg",
       },
     ],
+  },
+];
+
+export const author = [
+  {
+    name: "Joyful and Happy",
+    des: "Krishna is known for his joyful, happy, and playful character",
   },
 ];

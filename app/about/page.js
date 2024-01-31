@@ -1,49 +1,55 @@
-import Image from "next/image";
+"use client";
+
+import React, { useState } from "react";
+import { Tabs, TabsList, TabsContent, TabsTrigger } from "@/components/ui/tabs";
+import { uniqueCategories } from "@/utils/utils";
+import AboutCard from "@/components/AboutCard";
+import { aboutData } from "@/utils/utilsData";
 
 const About = () => {
+  const [categories, setCategories] = useState(uniqueCategories);
+  const [category, setCategory] = useState("all");
+
+  const filteredProjects = aboutData.filter((project) => {
+    // if category is 'all projects' return all projects, else filter by category
+    return category === "all" ? project : project.category === category;
+  });
+
   return (
-    <div className="flex flex-col items-center justify-center w-full h-full p-4">
-      <div className="w-full px-4 mt-4 text-center md:px-0">
-        <p className="mb-2 text-lg leading-relaxed">
-          <span className="text-primary">Bhagavad Gita</span> , also known as
-          the <span className="text-primary">Gita</span>- "The Song of The Lord"
-          is a practical guide to one's life that guides one to re-organise
-          their life, achieve inner peace and approach the Supreme Lord
-          <span className="text-primary">(the Ultimate Reality)</span> . It is a
-          <span className="text-primary">
-            {" "}
-            700-verse text in Sanskrit which comprises chapters 23 through 40{" "}
-          </span>
-          in the Bhishma-Parva section of the Mahabharata.
-        </p>
-        <p className="text-lg leading-relaxed">
-          The {"  "}
-          <span className="text-primary">Bhagavad Gita </span> is a dialogue
-          between Arjuna , a supernaturally gifted warrior and his guide and
-          charioteer <span className="text-primary">Lord Krishna</span> on the
-          battlefield of Kurukshetra. As both armies stand ready for the battle,
-          the mighty warrior Arjuna, on observing the warriors on both sides
-          becomes overwhelmed with grief and compassion due to the fear of
-          losing his relatives and friends and the consequent sins attributed to
-          killing his own relatives. So, he surrenders to{" "}
-          <span className="text-primary">Lord Krishna</span>, seeking a
-          solution. Thus, follows the wisdom of the Bhagavad Gita. Over
-          <span className="text-primary"> 18 chapters</span>, Gita packs an
-          intense analysis of life, emotions and ambitions, discussion of
-          various types of yoga, including Jnana, Bhakti, Karma and Raja, the
-          difference between Self and the material body as well as the
-          revelation of the Ultimate Purpose of Life.
-        </p>
+    <section className="min-h-screen pt-12">
+      <div className="container mx-auto">
+        <h2 className="mx-auto mb-8 text-center section-title xl:mb-16">
+          About
+        </h2>
+        {/* tabs */}
+        <Tabs defaultValue={category} className="mb-24 xl:mb-48">
+          <TabsList className="w-full  grid h-full md:grid-cols-4 lg:max-w-[640px] mb-12 mx-auto md:border dark:border-none">
+            {categories.map((category, index) => {
+              return (
+                <TabsTrigger
+                  onClick={() => setCategory(category)}
+                  value={category}
+                  key={index}
+                  className="capitalize w-[162px] md:w-auto"
+                >
+                  {category}
+                </TabsTrigger>
+              );
+            })}
+          </TabsList>
+          {/* tabs content */}
+          <div className="grid grid-cols-1 gap-4 text-lg xl:mt-8 lg:grid-cols-3">
+            {filteredProjects.map((project, index) => {
+              return (
+                <TabsContent value={category} key={index}>
+                  <AboutCard project={project} />
+                </TabsContent>
+              );
+            })}
+          </div>
+        </Tabs>
       </div>
-      {/* <div className="w-full h-4">
-        <Image
-          src="/about/gita.png"
-          // layout="fill"
-          fill={true}
-          alt="gita"
-        />
-      </div> */}
-    </div>
+    </section>
   );
 };
 

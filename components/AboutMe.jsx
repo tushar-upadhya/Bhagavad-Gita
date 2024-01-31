@@ -4,7 +4,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { infoData, qualificationData, skillData } from "@/utils/utilsAbout";
 import { Briefcase, GraduationCap } from "lucide-react";
 
-const About = () => {
+const AboutMe = () => {
   const getData = (arr, title) => {
     return arr.find((item) => item.title === title);
   };
@@ -33,7 +33,11 @@ const About = () => {
                 <TabsTrigger className="w-[162px] xl:w-auto" value="skills">
                   Skills
                 </TabsTrigger>
+                {/* <TabsTrigger className="w-[162px] xl:w-auto" value="skills">
+                  Author
+                </TabsTrigger> */}
               </TabsList>
+
               {/* tabs content */}
               <div className="mt-12 text-lg xl:mt-8">
                 {/* personal */}
@@ -89,30 +93,6 @@ const About = () => {
                         )}
                       </div>
                     </div>
-                    {/* tools */}
-                    {/* <div>
-                      <h4 className="mb-2 text-xl font-semibold xl:text-left">
-                        Tools
-                      </h4>
-                      <div className="mb-4 border-b border-border"></div>
-
-                      <div className="flex justify-center gap-x-8 xl:justify-start">
-                        {getData(skillData, "tools").data.map((item, index) => {
-                          const { imgPath } = item;
-                          return (
-                            <div key={index}>
-                              <Image
-                                src={imgPath}
-                                width={48}
-                                height={48}
-                                alt=""
-                                priority
-                              />
-                            </div>
-                          );
-                        })}
-                      </div>
-                    </div> */}
                   </div>
                 </TabsContent>
               </div>
@@ -124,4 +104,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default AboutMe;

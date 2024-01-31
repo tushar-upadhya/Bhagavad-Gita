@@ -1,7 +1,3 @@
-// import Link from "next/link";
-// import { Button } from "./ui/button";
-// import { Download, Send } from "lucide-react";
-
 import { RiArrowDownSLine } from "react-icons/ri";
 
 import DevImg from "./DevImg";
@@ -33,18 +29,6 @@ const Hero = () => {
           </div>
           {/* image */}
           <div className="relative hidden xl:flex">
-            {/* <Badge
-              containerStyles="absolute top-[24%] -left-[5rem]"
-              badgeText="Years Of Experience"
-            />
-            <Badge
-              containerStyles="absolute top-[80%] -left-[1rem]"
-              badgeText="Madhusudan"
-            />
-            <Badge
-              containerStyles="absolute top-[55%] -right-8"
-              badgeText="Keshava"
-            /> */}
             <div className="bg-hero_shape2_light dark:bg-hero_shape2_dark w-[500px] h-[500px] bg-no-repeat absolute -top-1 -right-2" />
             <DevImg
               containerStyles="bg-hero_shape w-[510px] h-[462px] bg-no-repeat relative bg-bottom"
