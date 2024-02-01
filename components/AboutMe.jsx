@@ -1,8 +1,12 @@
 import DevImg from "./DevImg";
 import Image from "next/image";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { infoData, qualificationData, skillData } from "@/utils/utilsAbout";
-import { Briefcase, GraduationCap } from "lucide-react";
+import {
+  infoData,
+  qualificationData,
+  skillData,
+  KrishnaNames,
+} from "@/utils/utilsAbout";
 
 const AboutMe = () => {
   const getData = (arr, title) => {
@@ -33,9 +37,12 @@ const AboutMe = () => {
                 <TabsTrigger className="w-[162px] xl:w-auto" value="skills">
                   Skills
                 </TabsTrigger>
-                {/* <TabsTrigger className="w-[162px] xl:w-auto" value="skills">
-                  Author
-                </TabsTrigger> */}
+                <TabsTrigger
+                  className="w-[162px] xl:w-auto"
+                  value="KrishnaNames"
+                >
+                  Krishna Names
+                </TabsTrigger>
               </TabsList>
 
               {/* tabs content */}
@@ -91,6 +98,33 @@ const AboutMe = () => {
                             );
                           }
                         )}
+                      </div>
+                    </div>
+                  </div>
+                </TabsContent>
+                {/* Krishna Names */}
+                <TabsContent value="KrishnaNames">
+                  <div className="text-center xl:text-left">
+                    {/* skills */}
+                    <div className="mb-16">
+                      <h4 className="mb-2 text-xl font-semibold">Krishna </h4>
+                      <div className="mb-4 border-b border-border"></div>
+                      {/* skill list */}
+                      <div>
+                        {KrishnaNames.map((item, index) => {
+                          const { name, des } = item;
+                          return (
+                            <div
+                              className="mx-auto text-center w-2/8 xl:text-left xl:mx-0"
+                              key={index}
+                            >
+                              <div className="font-medium text-primary">
+                                {name} :
+                              </div>
+                              <div className="font-medium">{des}</div>
+                            </div>
+                          );
+                        })}
                       </div>
                     </div>
                   </div>

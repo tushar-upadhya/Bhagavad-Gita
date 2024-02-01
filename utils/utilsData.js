@@ -7,6 +7,7 @@ import dance from "@/public/about/krishna/dance.png";
 import uncle from "@/public/about/krishna/uncle.png";
 import Dwarkadhish from "@/public/about/krishna/Dwarkadhish.jpeg";
 import mahabharat from "@/public/about/krishna/mahabharat.jpeg";
+import friend from "@/public/about/krishna/friend.png";
 import leave from "@/public/about/krishna/leave.jpeg";
 
 // gita
@@ -15,11 +16,17 @@ import author from "@/public/about/gita/author.png";
 import Vedavyasa from "@/public/about/gita/Vedavyasa.png";
 
 // temple
-import JagannathTemple from "@/public/about/temple/JagannathTemple.png";
+
 import dwarkadhishTemple from "@/public/about/temple/dwarkadhishTemple.png";
 import BihariTemple from "@/public/about/temple/BihariTemple.jpeg";
 import GuruvayurTemple from "@/public/about/temple/GuruvayurTemple.png";
-import MadhanTemple from "@/public/about/temple/MadhanTemple.png";
+import GovindDevTemple from "@/public/about/temple/GovindDevTemple.jpeg";
+import ISKCONB_Temple from "@/public/about/temple/ISKCONB_Temple.jpeg";
+import ISKCONTemple from "@/public/about/temple/ISKCONTemple.jpeg";
+import JagannathTemple from "@/public/about/temple/JagannathTemple.png";
+import JanmabhoomiTemple from "@/public/about/temple/JanmabhoomiTemple.jpeg";
+import PremTemple from "@/public/about/temple/PremTemple.jpeg";
+import RadhaRamanTemple from "@/public/about/temple/RadhaRamanTemple.jpeg";
 
 export const aboutData = [
   // krishna
@@ -27,7 +34,7 @@ export const aboutData = [
   {
     image: birth,
     category: "Krishna",
-    name: "Born in Prison of the Mathura",
+    name: "Born in Prison in Mathura",
     link: "https://prm-tusharupadhyay.vercel.app/",
     github: "https://github.com/tushar-upadhya/Profile-Read-Maker",
   },
@@ -87,6 +94,13 @@ export const aboutData = [
     github: "https://github.com/tushar-upadhya/Bhagavad-Gita",
   },
   {
+    image: friend,
+    category: "Krishna",
+    name: "Krishna And Sudama",
+    link: "https://bhagavad-gita-tusharupadhyay.vercel.app/",
+    github: "https://github.com/tushar-upadhya/Bhagavad-Gita",
+  },
+  {
     image: mahabharat,
     category: "Krishna",
     name: "Mahabharat",
@@ -132,9 +146,44 @@ export const aboutData = [
     github: "https://github.com/tushar-upadhya/Profile-Read-Maker",
   },
   {
-    image: MadhanTemple,
+    image: GovindDevTemple,
     category: "temple",
-    name: "Sri Sri Radha Madhan Mohan Mandir",
+    name: "Govind Dev Ji Temple",
+    link: "https://prm-tusharupadhyay.vercel.app/",
+    github: "https://github.com/tushar-upadhya/Profile-Read-Maker",
+  },
+  {
+    image: ISKCONB_Temple,
+    category: "temple",
+    name: "ISKCON Temple Bangalore",
+    link: "https://prm-tusharupadhyay.vercel.app/",
+    github: "https://github.com/tushar-upadhya/Profile-Read-Maker",
+  },
+  {
+    image: ISKCONTemple,
+    category: "temple",
+    name: "ISKCON temple mathura",
+    link: "https://prm-tusharupadhyay.vercel.app/",
+    github: "https://github.com/tushar-upadhya/Profile-Read-Maker",
+  },
+  {
+    image: JanmabhoomiTemple,
+    category: "temple",
+    name: "Sri Krishna Janmasthan",
+    link: "https://prm-tusharupadhyay.vercel.app/",
+    github: "https://github.com/tushar-upadhya/Profile-Read-Maker",
+  },
+  {
+    image: PremTemple,
+    category: "temple",
+    name: "Prem Mandir",
+    link: "https://prm-tusharupadhyay.vercel.app/",
+    github: "https://github.com/tushar-upadhya/Profile-Read-Maker",
+  },
+  {
+    image: RadhaRamanTemple,
+    category: "temple",
+    name: "Shri Radha Raman Temple",
     link: "https://prm-tusharupadhyay.vercel.app/",
     github: "https://github.com/tushar-upadhya/Profile-Read-Maker",
   },
@@ -152,7 +201,7 @@ export const aboutData = [
   {
     image: author,
     category: "About Gita",
-    name: "Ganesha, as told to him by the Maharishi Vedavyasa about Mahabharat",
+    name: "Ganesha, as told to him by the Maharishi Vedavyasa about Bhagavad Gita",
     link: "https://prm-tusharupadhyay.vercel.app/",
     github: "https://github.com/tushar-upadhya/Profile-Read-Maker",
   },

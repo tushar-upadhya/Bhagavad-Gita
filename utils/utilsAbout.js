@@ -60,9 +60,29 @@ export const skillData = [
   },
 ];
 
-export const author = [
+export const KrishnaNames = [
   {
-    name: "Joyful and Happy",
-    des: "Krishna is known for his joyful, happy, and playful character",
+    name: "Krishna",
+    des: "The dark or all-attractive one",
+  },
+  {
+    name: "Gopal",
+    des: "The protector of cows or the cowherd",
+  },
+  {
+    name: "Murlimanohar",
+    des: "The one who looks beautiful with a flute",
+  },
+  {
+    name: "Ranchod",
+    des: "The one who runs away from the battlefield2",
+  },
+  {
+    name: "Dwarkadheesh",
+    des: "The lord of Dwarka, the city where Krishna ruled",
+  },
+  {
+    name: "Madhava",
+    des: "The sweet or honey-like one",
   },
 ];

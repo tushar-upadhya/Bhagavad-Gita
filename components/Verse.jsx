@@ -1,6 +1,6 @@
 "use client";
 import axios from "axios";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import {
   Accordion,
   AccordionContent,
@@ -11,8 +11,8 @@ import {
 const Verse = ({ chapterNumber }) => {
   const [apiData, setApiData] = useState([]);
 
-  useEffect(() => {
-    const fetchData = async () => {
+  const fetchData = useMemo(
+    () => async () => {
       const options = {
         method: "GET",
         url: `https://bhagavad-gita3.p.rapidapi.com/v2/chapters/${chapterNumber}/verses/`,
@@ -29,10 +29,13 @@ const Verse = ({ chapterNumber }) => {
       } catch (error) {
         console.error(error);
       }
-    };
+    },
+    [chapterNumber]
+  );
 
+  useEffect(() => {
     fetchData();
-  }, [chapterNumber]);
+  }, [fetchData]);
 
   return (
     <Accordion type="single" collapsible className="w-full">
