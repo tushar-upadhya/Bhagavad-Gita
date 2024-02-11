@@ -18,10 +18,13 @@ export default function RootLayout({ children }) {
       <head>
         <link rel="icon" href="/favicon.ico" />
       </head>
+
       <body className={outfit.className}>
         <ThemeProvider attribute="class" defaultTheme="light">
           <Header />
+
           {children}
+
           <Footer />
         </ThemeProvider>
       </body>
