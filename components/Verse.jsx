@@ -1,4 +1,5 @@
 "use client";
+
 import axios from "axios";
 import { useState, useEffect, useMemo } from "react";
 import {
@@ -42,7 +43,7 @@ const Verse = ({ chapterNumber }) => {
       {apiData &&
         apiData.map((verse, index) => (
           <AccordionItem key={index} value={`item-${index}`}>
-            <AccordionTrigger className="m-1 mt-2 text-xl font-semibold transition-all duration-200 border-b hover:text-primary text-slate-600">
+            <AccordionTrigger className="m-1 mt-2 text-xl font-semibold transition-all duration-200 hover:text-primary text-slate-600">
               Verse {verse.verse_number} | {verse.text}
             </AccordionTrigger>
             <AccordionContent>
@@ -51,7 +52,7 @@ const Verse = ({ chapterNumber }) => {
               {verse.translations.map((translation, tIndex) => (
                 <p
                   key={tIndex}
-                  className="m-6 mt-3 text-lg font-semibold capitalize transition-all duration-150 cursor-pointer text-inherit hover:border-b "
+                  className="m-6 mt-3 text-lg font-semibold capitalize transition-all duration-150 cursor-pointer hover:border-b-2 text-inherits"
                 >
                   {translation.description}
                 </p>

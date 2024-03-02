@@ -1,12 +1,15 @@
-import { Outfit } from "next/font/google";
+import { Roboto } from "next/font/google";
 import "./globals.css";
 
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { ThemeProvider } from "@/components/ThemeProvider";
 
-const outfit = Outfit({ subsets: ["latin"] });
-
+const roboto = Roboto({
+  weight: "400",
+  subsets: ["latin"],
+  display: "swap",
+});
 export const metadata = {
   title: "Bhagavad Gita",
   description: "Bhagavad Gita , Krishna, ",
@@ -19,7 +22,7 @@ export default function RootLayout({ children }) {
         <link rel="icon" href="/favicon.ico" />
       </head>
 
-      <body className={outfit.className}>
+      <body className={roboto.className}>
         <ThemeProvider attribute="class" defaultTheme="light">
           <Header />
 

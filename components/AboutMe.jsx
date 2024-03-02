@@ -1,12 +1,6 @@
 import DevImg from "./DevImg";
-import Image from "next/image";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import {
-  infoData,
-  qualificationData,
-  skillData,
-  KrishnaNames,
-} from "@/utils/utilsAbout";
+import { infoData, skillData, KrishnaNames } from "@/utils/utilsAbout";
 
 const AboutMe = () => {
   const getData = (arr, title) => {
@@ -21,6 +15,7 @@ const AboutMe = () => {
         </h2>
         <div className="flex flex-col xl:flex-row">
           {/* image */}
+
           <div className="relative flex-1 hidden xl:flex">
             <DevImg
               containerStyles="bg-about_shape_light dark:bg-about_shape_dark w-[505px] h-[505px] bg-no-repeat relative"
@@ -46,8 +41,10 @@ const AboutMe = () => {
               </TabsList>
 
               {/* tabs content */}
+
               <div className="mt-12 text-lg xl:mt-8">
                 {/* personal */}
+
                 <TabsContent value="personal">
                   <div className="text-center xl:text-left">
                     <h3 className="mb-4 h3">
@@ -74,6 +71,7 @@ const AboutMe = () => {
                 </TabsContent>
 
                 {/* skills */}
+
                 <TabsContent value="skills">
                   <div className="text-center xl:text-left">
                     {/* skills */}
@@ -102,7 +100,9 @@ const AboutMe = () => {
                     </div>
                   </div>
                 </TabsContent>
+
                 {/* Krishna Names */}
+
                 <TabsContent value="KrishnaNames">
                   <div className="text-center xl:text-left">
                     {/* skills */}

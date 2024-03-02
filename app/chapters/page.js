@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from "react";
 import axios from "axios";
-import Chapter from "@/components/Chapter";
 
 import {
   Carousel,
@@ -11,6 +10,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import Chapter from "@/components/Chapter";
 
 const Chapters = () => {
   const [apiData, setApiData] = useState([]);

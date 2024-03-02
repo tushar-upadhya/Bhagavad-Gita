@@ -16,7 +16,7 @@ const Footer = () => {
           />
           {/* copyright */}
           <div className="text-muted-foreground">
-            {currentMonth} - {currentYear} | nocopyright &copy;{" "}
+            {currentMonth} - {currentYear} | nocopyright |{" "}
             <Link
               href="/absolute mb-8 text-sm font-medium capitalize top-2 right-12 "
               target="_blank"

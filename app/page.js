@@ -1,15 +1,25 @@
-import Hero from "@/components/Hero";
-import Cta from "@/components/Cta";
-import Quote from "@/components/Quote";
-import AboutMe from "@/components/AboutMe";
+import dynamic from "next/dynamic";
+
+const ComponentA = dynamic(() => import("../components/Hero"));
+const ComponentB = dynamic(() => import("../components/AboutMe"));
+const ComponentC = dynamic(() => import("../components/Quote"));
+const ComponentD = dynamic(() => import("../components/Cta"));
+const ComponentE = dynamic(() => import("../components/Verse"), {
+  ssr: false,
+});
 
 export default function Home() {
   return (
     <main>
-      <Hero />
-      <AboutMe />
-      <Quote />
-      <Cta />
+      <ComponentA />
+
+      <ComponentB />
+
+      <ComponentC />
+
+      <ComponentD />
+
+      <ComponentE />
     </main>
   );
 }

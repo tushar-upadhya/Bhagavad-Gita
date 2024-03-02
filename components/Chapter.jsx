@@ -1,7 +1,8 @@
-// "use clients";
-
-import Verse from "./Verse";
 import { Badge } from "./ui/badge";
+
+import dynamic from "next/dynamic";
+
+const Verse = dynamic(() => import("../components/Verse"));
 
 const Chapter = ({ lesson, onClick }) => {
   return (
@@ -10,9 +11,10 @@ const Chapter = ({ lesson, onClick }) => {
       onClick={onClick}
     >
       <div className="h-full px-8 py-6 ">
-        <Badge className="absolute mb-8 text-sm font-medium capitalize top-2 right-12 ">
+        <Badge className="absolute mb-8 text-sm font-medium leading-4 capitalize top-2 right-12 ">
           {lesson.slug}
         </Badge>
+
         <h4 className="mt-4 mb-1 border-b h4">
           {lesson.name} | {lesson.name_translated}{" "}
         </h4>
@@ -21,9 +23,11 @@ const Chapter = ({ lesson, onClick }) => {
           <p className="text-lg font-semibold ">
             {lesson.chapter_summary_hindi}
           </p>
+
           <p className="mt-3 text-lg font-semibold text-muted-foreground">
             {lesson.chapter_summary}
           </p>
+
           <p className="mt-3 text-lg font-bold text-inherit">
             Verse {lesson.verses_count}
           </p>

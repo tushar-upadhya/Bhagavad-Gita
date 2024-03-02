@@ -1,13 +1,7 @@
 "use client";
 
 import Image from "next/image";
-
-import {
-  Card,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+import { Card, CardDescription, CardHeader } from "@/components/ui/card";
 
 // import swiper react components
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -25,7 +19,9 @@ const Quote = () => {
     <section className="mb-12 xl:mb-32">
       <div className="container mx-auto">
         <h2 className="mx-auto mb-12 text-center section-title">Quotes</h2>
+
         {/* slider */}
+
         <Swiper
           slidesPerView={1}
           breakpoints={{

@@ -1,8 +1,5 @@
-import Link from "next/link";
 import Image from "next/image";
 import { Card, CardHeader } from "./ui/card";
-import { Github, Link2Icon } from "lucide-react";
-import { Badge } from "./ui/badge";
 
 const AboutCard = ({ project }) => {
   return (
@@ -25,7 +22,6 @@ const AboutCard = ({ project }) => {
         <h4 className="mb-1 text-sm font-semibold capitalize border-b text-muted-foreground">
           {project.name}
         </h4>
-        {/* <h4 className="mb-1 font-semibold border-b">{project.description}</h4> */}
       </div>
     </Card>
   );
